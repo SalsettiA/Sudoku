@@ -1,2 +1,2 @@
 First experience with GitHub committing a simple Suduku grid generator.
-TODO: The nunmber of grid to generates is hardcoded for te moment. The next step would be to pass it per command
+TODO: The nunmber of grids to generate is hardcoded for at the moment. The next step would be to pass this parameter on the command line.
