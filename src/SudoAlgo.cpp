@@ -32,7 +32,7 @@ void SudoAlgo::display() {
 	cout << "-------------------------" << endl;
 	unsigned int sep_x = 0, sep_y = 0;
 	for ( unsigned int y = 0; y < 9; y++ ) {
-			cout << "| ";
+		cout << "| ";
 		for (unsigned int x = 0; x < 9; x++ ) {
 			cout << grid[y][x] << " ";
 			if ( ++sep_x == 3 ) {
@@ -58,7 +58,7 @@ void SudoAlgo::display() {
  * @square_x: position of the small grid 3x3
  * @square_y: position of the small grid 3x3
 **/
-void SudoAlgo::decode(unsigned int i, unsigned int &x, unsigned int &y, unsigned int &square_x, unsigned int &square_y) {
+void SudoAlgo::decode(const unsigned int i, unsigned int &x, unsigned int &y, unsigned int &square_x, unsigned int &square_y) const {
 	y = i / 9;
 	x = i % 9;
 	square_y = y / 3;
@@ -74,7 +74,7 @@ void SudoAlgo::decode(unsigned int i, unsigned int &x, unsigned int &y, unsigned
  * @depth: index of the cell of the complete grid
  * @return true if a complete grid has been generated
  */
-bool SudoAlgo::generate(unsigned int depth) {
+bool SudoAlgo::generate(const unsigned int depth) {
 	if ( depth <= 80 ) {
 		unsigned int x, y, square_x, square_y;
 		decode(depth, x, y, square_x, square_y);

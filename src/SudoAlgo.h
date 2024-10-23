@@ -15,11 +15,11 @@ typedef unordered_set<int> number_set;
 
 class SudoAlgo {
 public:
-	SudoAlgo(unsigned int i = 0);
+	SudoAlgo(const unsigned int i = 0);
 	virtual ~SudoAlgo();
 	void display();
 	bool generate(const unsigned int i = 0);
-	bool search(const unsigned int i = 0);
+
 private:
 	unsigned int grid[9][9];
 	number_set column[9];
@@ -28,7 +28,7 @@ private:
 	unsigned int solution_nr = 0;
 	unsigned int iter;
 
-	void decode(unsigned int i, unsigned int &, unsigned int &, unsigned int &, unsigned int &);
+	void decode(const unsigned int i, unsigned int &, unsigned int &, unsigned int &, unsigned int &) const;
 };
 
 #endif /* SUDOALGO_H_ */
